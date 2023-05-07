@@ -42,7 +42,7 @@ app.use("/videos", videoRouter);
 app.use("/users", userRouter); 
 app.use("/api", apiRouter);
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const handleListening = () =>
   console.log(`✅ Server listenting on http://localhost:${PORT} 🚀`);
 app.listen(PORT, handleListening);
